@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anton', sans-serif;
+
+
+}
+body{
+    background-color: teal;
+    color: white;
+}
+
+header{
+    background-color: white;
+    padding: 30px;
+}
+
+header > h1{
+    color: teal;
+    text-align: center;
+}
+
+
+.score-board{
+    border: 3px solid white;
+    width: 300px;
+    margin: 30px auto;
+    font-size: 30px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 20px ;
+    position: relative;
+}
+
+.badge{
+    background: #e2584d;
+    font-size: 14px;
+    padding: 2px 10px;
+
+}
+
+#user{
+    position: absolute;
+    top: 25px;
+    left: -25px;
+
+}
+
+#comp{
+    position: absolute;
+    top: 25px;
+    right: -30px;
+
+}
+
+.result > p {
+    text-align: center;
+    font-size: 30px;
+}
+
+.choises{
+    /* display: flex; */
+    text-align: center;
+    margin: 10px  0 ;
+ 
+}
+
+.escolha {
+    display: inline-block;
+    background-color: white;
+    justify-items: center;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 0 20px;
+    padding: 27px;
+    transition: 0.3s ease;
+}
+
+/* .img > s{
+    height: 10px;
+} */
+
+.escolha:hover{
+    background-color: teal;
+}
+
+#action-message{
+    margin-top: 25px;
+    text-align: center;
+}

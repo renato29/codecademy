@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RockPapersScissors Game</title>
+    <title>Rock Papers Scissors Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,11 +14,11 @@
         <!-- titulo -->
     </header>
 
-    <div class="score-bord">
+    <div class="score-board">
         <!-- quadro de pontos -->
         <div id="user" class="badge">user</div>
         <!-- lado do user -->
-        <div id="comp" class="badge">computer</div>
+        <div id="comp" class="badge">comp</div>
         <!-- lado do compurador -->
         <span id="user-points">0</span> : <span id="comp-points">0</span>
         <!-- linha do marcador de pontos, usamos span para que fiquem na mesma linha -->
@@ -28,20 +28,21 @@
         <p>Rock covers Scissors, You win </p>
     </div>
 
-    <div class="choises">
-        <div id="choise">
-            <img id="r" src="./imgs/rock.png" alt="rock-choise">
+    <div id="choises" class="choises">
+        <div class="escolha" id="r">
+            <img src="./imgs/rock.png" alt="rock-choise">
         </div>
-        <div id="choise">
-            <img  id="p" src="./imgs/paper.png" alt="paper-choise">
+        <div class="escolha" id="p">
+            <img src="./imgs/paper.png" alt="paper-choise">
         </div>
-        <div id="choise">
-            <img id="s" src="./imgs/scissors.png" alt="scissors-choise">
+        <div class="escolha" id="s">
+            <img src="./imgs/scissors.png" alt="scissors-choise">
         </div>
-        <p>Make your move</p>
 
 
+        <p id="action-message" >Make your move.</p>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
