@@ -1,9 +1,7 @@
 let userPoint = 0;
 let compPoint = 0;
-const userPoint_temp = document.getElementById('user-points');
-// variaveldo DOM  que pega o elemento de pontuacao do HTML do USER
-const compPoint_temp = document.getElementById('comp-points');
-// variaveldo DOM  que pega o elemento de pontuacao do HTML do PC
+const userPoint_temp = document.getElementById('user-points');// variaveldo DOM  que pega o elemento de pontuacao do HTML do USER
+const compPoint_temp = document.getElementById('comp-points'); // variaveldo DOM  que pega o elemento de pontuacao do HTML do PC
 
 //agora para manipular o placar pegamos e criamos uma nova variavel.
 const scoreboard_placar = document.querySelector(".score-board");
@@ -39,45 +37,39 @@ function letterToWords(letra) {
 }
 
 function win(userChoise,pcChoise) {
+    const userChoise_div = document.getElementById(userChoise)
     userPoint++;
-    userPoint_temp.innerHTML = userPoint;
-    //atualiza o ponto e escreve no placar o ponto que ganhou. 
-    compPoint_temp.innerHTML = compPoint;
-    //mantem a pontuacao do PC igual.
-    result_p.innerHTML = `=]${letterToWords(userChoise)} (U)  beats  ${letterToWords(pcChoise)}(PC) YOU WIN =]`;
+    userPoint_temp.innerHTML = userPoint; //atualiza o ponto e escreve no placar o ponto que ganhou. 
+    compPoint_temp.innerHTML = compPoint;//mantem a pontuacao do PC igual.
+    result_p.innerHTML = `=]  ${letterToWords(userChoise)} (U)  beats  ${letterToWords(pcChoise)}(PC) YOU WIN =]`;
     //na linha acima imprimimos o resultado ja com as letras trocadas por palavras, repare que chamei a funcao dentro da veriavel que mudara o dom pelo innerHTML.
     //adicionar luz na selecao de escolha com vitoria
-    document.getElementById(userChoise).classList.add('green-glow')
+    userChoise_div.classList.add('green-glow');
 
-    setTimeout(
-        function (){document.getElementById(userChoise).classList.remove('green-glow')} ,2000);
+    setTimeout(() => userChoise_div.classList.remove('green-glow') ,800);
+    }
 
 
 function lose(userChoise,pcChoise) {
+    const userChoise_div = document.getElementById(userChoise)
     compPoint++;
     compPoint_temp.innerHTML = compPoint;//imprime o ponto ganho do PC
     userPoint_temp.innerHTML = userPoint; //imprime o ponto igual do user
-    result_p.innerHTML = `+___+ ${letterToWords(pcChoise)} (U) beats ${letterToWords(userChoise)} (PC) YOU LOSE +___+`
+    result_p.innerHTML = `+___+  ${letterToWords(pcChoise)} (U) beats ${letterToWords(userChoise)} (PC) YOU LOSE +___+`;
+    userChoise_div.classList.add('red-glow');
 
-}
+    setTimeout(()=> userChoise_div.classList.remove('red-glow') ,800)};
+
+
 
 function draw(userChoise,pcChoise) {
-    result_p.innerHTML = `===DRAW=== ${letterToWords(pcChoise)} (U) VERSUS ${letterToWords(userChoise)} (PC) ===DRAW===`
+    const userChoise_div = document.getElementById(userChoise)
+    result_p.innerHTML = `===DRAW=== ${letterToWords(pcChoise)} (U) VERSUS ${letterToWords(userChoise)} (PC) ===DRAW===`;
+
+    userChoise_div.classList.add('yellow-glow');
+
+    setTimeout(()=> userChoise_div.classList.remove('yellow-glow') ,800);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //funcao do click do user
@@ -111,42 +103,19 @@ function game(user_click) {
     //testando para ver a mecanica de escolha do user e escolha do pc (random)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // adicionar eventos de click de usuario 
 // log para checar se o click foi lido pelo pc/
 function main() {
-    rock_div.addEventListener('click', function () {
+    rock_div.addEventListener('click', ()=>game("r"));
         // console.log("Hey you clicked in rock option!"); seo ouser clicou em rock ira chamar uma funcao game()
-        game("r");
 
-    });
-
-
-    paper_div.addEventListener('click', function () {
+    paper_div.addEventListener('click', ()=> game("p"));
         // console.log("Hey you clicked in paper option!");
-        game("p");
 
-    });
-    scissor.addEventListener('click', function () {
+    scissor.addEventListener('click',  ()=>game("s"));
         // console.log("Hey you clicked in scissor option!");
-        game("s");
-
-    });
+    
 }
-
 
 main();
 
