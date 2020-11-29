@@ -4,11 +4,11 @@ function rando_num(max_number) {
 }
 // fazer interacao do botao pelo DOM pegar o botao e o campo de resposta
 let btn = document.querySelector('button')
-let balltalked = document.querySelector('balltalked')
+let balltalked = document.querySelector('#balltalked')
 
 
 //agora queremos adicionar um evento de click do usuario.
-button.addEventListener("click", function(){
+btn.addEventListener("click", function(){
     //gerar um numero aleatorio 
     //criar um numero da resposta
     let msg = rando_num(3);
@@ -25,7 +25,7 @@ button.addEventListener("click", function(){
     else if (msg== 2){
         msgtext = "Yes ";
     }
-    else{
+    else if (msg ==3){
         msgtext = "Don’t count on it.";
     }
     balltalked.innerText = msgtext;
