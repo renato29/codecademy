@@ -1,29 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RockPapersScissors Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1>Rock Papers Scissors</h1>
         <!-- titulo -->
     </header>
-    
+
     <div class="score-bord">
-            <!-- quadro de pontos -->
-             <div id="user" class="badge">user</div> 
-             <!-- lado do user -->
-             <div id="comp" class="badge">computer</div>
-             <!-- lado do compurador -->
-             <span id="user-points" >0</span> : <span id="comp-points">0</span> 
-             <!-- linha do marcador de pontos, usamos span para que fiquem na mesma linha -->
+        <!-- quadro de pontos -->
+        <div id="user" class="badge">user</div>
+        <!-- lado do user -->
+        <div id="comp" class="badge">computer</div>
+        <!-- lado do compurador -->
+        <span id="user-points">0</span> : <span id="comp-points">0</span>
+        <!-- linha do marcador de pontos, usamos span para que fiquem na mesma linha -->
     </div>
 
     <div class="result">
-        <p>Rock covers Scissors, You win  </p>
+        <p>Rock covers Scissors, You win </p>
+    </div>
+
+    <div class="choises">
+        <div id="choise">
+            <img id="r" src="./imgs/rock.png" alt="rock-choise">
+        </div>
+        <div id="choise">
+            <img  id="p" src="./imgs/paper.png" alt="paper-choise">
+        </div>
+        <div id="choise">
+            <img id="s" src="./imgs/scissors.png" alt="scissors-choise">
+        </div>
+        <p>Make your move</p>
+
 
     </div>
 </body>
+
 </html>
