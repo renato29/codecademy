@@ -6,11 +6,9 @@ const compPoint_temp = document.getElementById('comp-points');
 // variaveldo DOM  que pega o elemento de pontuacao do HTML do PC
 
 //agora para manipular o placar pegamos e criamos uma nova variavel.
-
 const scoreboard_placar = document.querySelector(".score-board");
 
 const result_p = document.querySelector(".result > p")
-
 //agora par pegar cada opcao da brincadeira.rock,paper,scissor.
 
 const rock_div = document.getElementById("r");
@@ -48,8 +46,12 @@ function win(userChoise,pcChoise) {
     //mantem a pontuacao do PC igual.
     result_p.innerHTML = `=]${letterToWords(userChoise)} (U)  beats  ${letterToWords(pcChoise)}(PC) YOU WIN =]`;
     //na linha acima imprimimos o resultado ja com as letras trocadas por palavras, repare que chamei a funcao dentro da veriavel que mudara o dom pelo innerHTML.
+    //adicionar luz na selecao de escolha com vitoria
+    document.getElementById(userChoise).classList.add('green-glow')
 
-}
+    setTimeout(
+        function (){document.getElementById(userChoise).classList.remove('green-glow')} ,2000);
+
 
 function lose(userChoise,pcChoise) {
     compPoint++;
