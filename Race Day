@@ -1,0 +1,25 @@
+Race Day - conditionals 
+let raceNumber = Math.floor(Math.random()*1000);
+// retorna um numero random entre 0 (inclusive) e 1 (exclusivo)
+let status = false;
+let age = 19;
+
+
+//checando se o corredor é adulto e inscrito early ou nao
+if (age === 18 && status === true ){
+    raceNumber+=1000;
+    //adicionando 1000 ao numero do corredor
+
+}
+
+if (age > 18 && status === true ){
+    console.log(`You race begins at 9:30am and number is ${raceNumber}`);
+} 
+else if (age > 18 && status === false ){
+    console.log(`You race begins at 11:00am and number is ${raceNumber}`);
+}
+else if (age < 18 ){
+    console.log(`You race begins at 12:30am and number is ${raceNumber}`);
+}
+else{
+    console.log(`Check your registration desk. `);}
