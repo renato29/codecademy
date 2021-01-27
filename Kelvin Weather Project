@@ -1,0 +1,19 @@
+const kelvin = 293;
+// constante da temperatura kelvin
+
+//constante da tempreratura em celcius
+const celcius =  kelvin - 273 ;
+//kelvin convertido em  celcius.
+//agora vou calcular Fahrenheit
+//lembrando que let permite mudar o valor da variavel, enquanto const nao permite 
+let Fahrenheit = celcius * (9/5) +32 ;
+//arredondar para baixo o numero com biblioteca Math.
+Fahrenheit = Math.floor(Fahrenheit);
+//imprimir na tela a temperatura Fahrenheit
+console.log( `The temperature is ${Fahrenheit} degrees in Fahrenheit. `)
+
+//calculando newton a partir de Celcius
+let newton = celcius* (33/100);
+newton = Math.floor(newton);
+console.log(`The temperature is ${newton} degrees in  Newton `);
+ 
