@@ -1,0 +1,22 @@
+let myage = 30;
+// constante de idade humana
+let earlyYears = 2;
+//constante de 2 anos iniciais do cachorro
+earlyYears *= 10.5;
+ // dois anos iniciais do cachorro
+ let laterYears = myage - 2;
+ // anos sequentea do cachorro menos os dois anos iniciais
+laterYears *=4 ;
+//lateryears vezes 4 calculando o número de anos caninos contabilizados em seus últimos anos.
+console.log(earlyYears);
+console.log(laterYears);
+
+let myAgeInDogsYears = earlyYears +laterYears;
+ //valor representando a idade humana em anos de cachorro
+
+let myName  = 'Cleber'.toLowerCase()
+//escrevendo o nome que retorna em string com metodo toLowerCase.
+
+console.log(`My name is ${myName}. I'm ${myage}  in human years wich in dogs years is ${myAgeInDogsYears} years old in dog years.`);
+
+
