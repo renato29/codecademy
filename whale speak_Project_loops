@@ -1,0 +1,31 @@
+/*Simple program that translates text to "whale speak".
+
+*** Whale Translator ***
+
+This project is a modified version of the whale translator project found on Codecademy. The program translates text provided by the user into "Whale Speak". Essentially it removes the consonants from the input text and rebuilds the string using only vowels. If the text contains any "e's" or "u's" those vowels are then doubled. The resulting string is a vowel laden word that sounds like whale speak.*/ 
+//String to be converted into whale speak
+
+let input = 'This is a blue sea. I don\'t like red sea';
+
+//Array of letters to look for inside 'Input' string to convert from normal speak to  whale speak
+let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+//Array to store vowels found inside of 'Input' string.  This will an empty array initially.
+let resultArray = [];
+
+//Logic that compares 'Input' variable text to the 'vowels' array.  Goal is to find all the vowels inside the 'Input' string.  We will use a for loop
+for (let inputIndex = 0; inputIndex < input.length; inputIndex++) {
+  //Note: Commented log below to check work!
+  //console.log(inputIndex);
+  for (let vowelCheck = 0; vowelCheck < vowels.length; vowelCheck++) {
+  //console.log(vowelCheck);
+    if (input[inputIndex] === vowels[vowelCheck]) {
+      resultArray.push(input[inputIndex]);
+    }
+  }
+  if (input[inputIndex] === 'e' || input[inputIndex] === 'u') {
+    resultArray.push(input[inputIndex]);
+
+}
+}
+console.log(resultArray.join('').toUpperCase());
